@@ -12,10 +12,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/kayfo-platform" element={<HomePage />} />
-          <Route path="/kayfo-platform/games" element={<GamesPage />} />
-          <Route path="/kayfo-platform/gamedetail" element={<GameDetailPage />} />
-          <Route path="/kayfo-platform/contact" element={<ContactPage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/games" element={<GamesPage />} />
+          <Route path="/gamedetail" element={<GameDetailPage />} />
+          <Route path="/contact" element={<ContactPage />} />
 
           <Route path="*" element={<NotFoundPage />} />
 

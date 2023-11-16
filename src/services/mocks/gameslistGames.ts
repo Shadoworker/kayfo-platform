@@ -8,7 +8,7 @@ var gameslistGames = [
             {type:'android', link:'#'},
             {type:'ios', link:'#'},
         ],
-        tags : ["New", "Trending", "Fun", "Random", "Updated"],
+        tags : ["" , "New", "Trending", "Fun", "Random", "Updated"],
         pattern : [1,2]
     },
     {
@@ -16,7 +16,7 @@ var gameslistGames = [
         media : require("../../assets/img/2048-logo.png"),
         url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
         externals : [],
-        tags : ["New", "Trending", "Classic", "Fun", "Random", "Updated"],
+        tags : ["" , "New", "Trending", "Classic", "Fun", "Random", "Updated"],
         pattern : [1,2]
     },
     {
@@ -24,7 +24,7 @@ var gameslistGames = [
         media : require("../../assets/img/ak-logo.jpg"),
         url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
         externals : [],
-        tags : ["New", "Trending", "Classic", "Fun", "Random", "Updated"],
+        tags : ["" , "New", "Trending", "Classic", "Fun", "Random", "Updated"],
         pattern : [1,2]
     },
 
@@ -36,7 +36,7 @@ var gameslistGames = [
             {type:'android', link:'#'},
             {type:'ios', link:'#'},
         ],
-        tags : ["Updated", "Fun", "Random", "Updated"],
+        tags : ["" , "Updated", "Fun", "Random", "Updated"],
         pattern : [1,2]
     },
   
@@ -45,7 +45,7 @@ var gameslistGames = [
         media : require("../../assets/img/ar-logo.png"),
         url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
         externals : [],
-        tags : ["Trending", "Updated", "Fun", "Random"],
+        tags : ["" , "Trending", "Updated", "Fun", "Random"],
         pattern : [1,2]
     },
     
@@ -55,7 +55,7 @@ var gameslistGames = [
         media : require("../../assets/img/vn-logo.png"),
         url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
         externals : [],
-        tags : ["New", "Trending", "Classic", "Random", "Updated"],
+        tags : ["" , "New", "Trending", "Classic", "Random", "Updated"],
         pattern : [1,2]
     },
     {
@@ -63,7 +63,7 @@ var gameslistGames = [
         media : require("../../assets/img/tm-logo.png"),
         url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
         externals : [],
-        tags : ["New", "Trending", "Updated", "Fun", "Random", "Updated"],
+        tags : ["" , "New", "Trending", "Updated", "Fun", "Random", "Updated"],
         pattern : [1,2]
     },
     {
@@ -74,7 +74,7 @@ var gameslistGames = [
             {type:'android', link:'#'},
             {type:'ios', link:'#'},
         ],
-        tags : ["New", "Trending", "Random", "Updated"],
+        tags : ["" , "New", "Trending", "Random", "Updated"],
         pattern : [1,2]
     },
     {
@@ -82,7 +82,7 @@ var gameslistGames = [
         media : require("../../assets/img/fb-logo.png"),
         url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
         externals : [],
-        tags : ["New", "Trending", "Updated", "Fun", "Random", "Updated"],
+        tags : ["" , "New", "Trending", "Updated", "Fun", "Random", "Updated"],
         pattern : [1,2]
     },
     {
@@ -93,7 +93,7 @@ var gameslistGames = [
             {type:'android', link:'#'},
             {type:'ios', link:'#'},
         ],
-        tags : ["New", "Trending", "Classic", "Fun", "Random", "Updated"],
+        tags : ["" , "New", "Trending", "Classic", "Fun", "Random", "Updated"],
         pattern : [1,2]
     },
     {
@@ -101,7 +101,7 @@ var gameslistGames = [
         media : require("../../assets/img/ds-logo.png"),
         url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
         externals : [],
-        tags : ["New", "Trending", "Updated", "Fun", "Random", "Updated"],
+        tags : ["" , "New", "Trending", "Updated", "Fun", "Random", "Updated"],
         pattern : [1,2]
     },
     {
@@ -109,7 +109,7 @@ var gameslistGames = [
         media : require("../../assets/img/ar-logo.png"),
         url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
         externals : [],
-        tags : ["New", "Trending", "Updated", "Fun", "Random", "Updated"],
+        tags : ["" , "New", "Trending", "Updated", "Fun", "Random", "Updated"],
         pattern : [1,2]
     },
     {
@@ -120,7 +120,7 @@ var gameslistGames = [
             {type:'android', link:'#'},
             {type:'ios', link:'#'},
         ],
-        tags : ["New", "Trending", "Updated", "Fun", "Random", "Updated"],
+        tags : ["" , "New", "Trending", "Updated", "Fun", "Random", "Updated"],
         pattern : [1,2]
     },
     {
@@ -131,7 +131,7 @@ var gameslistGames = [
             {type:'android', link:'#'},
             {type:'ios', link:'#'},
         ],
-        tags : ["New", "Trending", "Random", "Updated"],
+        tags : ["" , "New", "Trending", "Random", "Updated"],
         pattern : [1,2]
     }
 

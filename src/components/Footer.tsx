@@ -28,12 +28,12 @@ class Footer extends Component<{}, State> {
                     <Col style={{display:'flex', alignItems:'center', justifyContent:'flex-end'}}>
                         <Row>
                             <Col style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
-                                <a href="" className='kayfo-social-link'>
+                                <a href="https://www.facebook.com/kayfogames?mibextid=LQQJ4d" className='kayfo-social-link'>
                                     <img src={require('../assets/icons/fb-icon.png')} alt="" />
                                 </a>
                             </Col>
                             <Col style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
-                                <a href="" className='kayfo-social-link'>
+                                <a href="https://youtube.com/@kayfogames7107?si=wv-ejD-NksYtHqiD" className='kayfo-social-link'>
                                     <img src={require('../assets/icons/yt-icon.png')} alt="" />
                                 </a>
                             </Col>

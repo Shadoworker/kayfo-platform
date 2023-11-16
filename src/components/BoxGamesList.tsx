@@ -2,6 +2,9 @@ import React, { Component, useState } from 'react';
 import { Container, Row, Col, ListGroup, Button } from 'react-bootstrap';
 import featuredGames from '../services/mocks/featuredGames';
 import { WithRouterProps, withRouter } from './WithRouterProps';
+import { connect } from 'react-redux';
+import { bindActionCreators} from 'redux';
+import * as mainActions from '../redux/main/mainActions'
 
 interface Props {
 
@@ -28,9 +31,19 @@ State> {
 
   componentDidMount(): void {
  
-
+    // this.applyFilter();
   }
 
+  applyFilter = () =>{
+
+    var tag = this.props.mainState.filterTag;
+
+    var _items = [...this.state.items];
+    
+    if(tag != "")
+        _items = _items.filter(item => item.tags.includes(tag));
+
+  }
 
   gotoGames = (_title:string)=>{
     // const navigate = useNavigate();
@@ -58,13 +71,19 @@ State> {
 
                 <div style={{minWidth:"100%", display:'flex', flexDirection:'row'}}>
 
-                    {this.state.items.map((item,index)=>
+                    {this.state.items.filter(item => item.tags.includes(this.props.mainState.filterTag)).map((item,index)=>
                         <div className='kayfo-masonry-container' key={index} style={{display:'flex', maxHeight:110, flexDirection:'column'}}>
                             <Col className='kayfo-masonry-item' style={{maxHeight:110, minWidth:110}}  onClick={()=>this.gotoGameDetail(item)} >
                                 <img src={item.media} alt="" style={{width:110, height:'100%', objectFit:'cover', borderRadius:6}}/>
                             </Col>
                         </div>
-                    )} 
+                    )}
+                    
+                    {this.state.items.filter(item => item.tags.includes(this.props.mainState.filterTag)).length == 0 &&
+                      <Col className='kayfo-filter-no-result-box'>
+                        Aucun résultat
+                      </Col>
+                    }
 
                 </div>
              </Col>
@@ -74,4 +93,19 @@ State> {
   };
 };
 
-export default withRouter<Props>(BoxGamesList);
+
+const mapStateToProps = (state:any) => {
+  return {
+    mainState: state.mainReducer
+  };
+};
+
+const mapDispatchToProps = (dispatch:any) => {
+  return {
+    mainActions: bindActionCreators(mainActions, dispatch)
+  };
+};
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter<Props>(BoxGamesList));
+

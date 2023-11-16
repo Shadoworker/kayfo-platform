@@ -165,6 +165,11 @@
 }
 
 
+.kayfo-masonry-item img {
+  
+  border-radius:6px;
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .kayfo-masonry-main::-webkit-scrollbar {
   display: none;

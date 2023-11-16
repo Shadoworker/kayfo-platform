@@ -65,16 +65,20 @@ State> {
 
                     <Col style={{display:'flex', alignItems:'center'}}>
                         <Row style={{flex:1}}>
-                            <Col style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
+                            {this.state.item.externals[0] &&
+                              <Col style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
                                 <a href="#" className='kayfo-social-link'>
                                     <img style={{width:'100%'}} src={require('../assets/icons/gplay-icon.png')} alt="" />
                                 </a>
                             </Col>
-                            <Col style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
+                            }
+                            {this.state.item.externals[1] &&
+                              <Col style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
                                 <a href="#" className='kayfo-social-link'>
                                     <img style={{width:'100%'}} src={require('../assets/icons/appstore-icon.png')} alt="" />
                                 </a>
                             </Col>
+                            }
                         </Row>
                     </Col>
 

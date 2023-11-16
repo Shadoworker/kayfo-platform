@@ -53,42 +53,45 @@ State> {
 
         var render : any[] = [];
 
-        for (let i = itemI; i < this.state.items.length; i++) 
+        // for (var i = itemI; i < this.state.items.length; i++) 
+        while(itemI < this.state.items.length)
         {
-            const element = this.state.items[i];
+            const element = this.state.items[itemI];
+            const nextElement = this.state.items[itemI+1];
 
-            if(pattern[patternI][0] == 1)
+            if(pattern[patternI][0] == 1 && pattern[patternI+1][0] == 1)
             {
                 var renderSecond = false;
-                itemI++;
-                patternI++;
-                var nextIndex = i;
+                itemI = itemI + 1;
+                patternI = patternI + 1;
+                // var nextIndex = i;
+                // console.log(itemI)
                 
-                const nextElement = this.state.items[itemI];
+                // const nextElement = this.state.items[itemI];
 
                 if(patternI >= pattern.length) patternI = 0;
 
-                if(element && pattern[patternI][0] == 1)
+                if(nextElement && pattern[patternI][0] == 1)
                  {
                     renderSecond = true;
-                    itemI++;
-                    patternI++;
+                    itemI = itemI + 1;
+                    patternI = patternI + 1;
                     if(patternI >= pattern.length) patternI = 0;
-                    nextIndex = itemI;
+                    // nextIndex = itemI;
 
 
                  }
                  
 
                 var r = (
-                <div className='kayfo-masonry-container'>
+                <div key={itemI} className='kayfo-masonry-container'>
                     <Col className='kayfo-masonry-item' style={{minWidth:'50%'}} onClick={()=>this.gotoGameDetail(element)}  >
-                        <img src={this.state.items[i].media} alt="" style={{width:110}}/>
+                        <img src={element.media} alt="" style={{width:110}}/>
                     </Col>
 
                     {renderSecond && 
-                    <Col className='kayfo-masonry-item' style={{minWidth:'50%'}} onClick={()=>this.gotoGameDetail(element)} >
-                        <img src={element.media} alt="" style={{width:110}}/>
+                    <Col className='kayfo-masonry-item' style={{minWidth:'50%'}} onClick={()=>this.gotoGameDetail(nextElement)} >
+                        <img src={nextElement.media} alt="" style={{width:110}}/>
                     </Col>}
                 </div>)
  
@@ -99,14 +102,14 @@ State> {
             else
             {
                 var r = (
-                    <div className='kayfo-masonry-container' style={{display:'flex', minHeight:234, flexDirection:'column', justifyContent:'space-between'}}>
+                    <div  key={itemI} className='kayfo-masonry-container' style={{display:'flex', minHeight:234, flexDirection:'column', justifyContent:'space-between'}}>
                         <Col className='kayfo-masonry-item' style={{minHeight:234}} onClick={()=>this.gotoGameDetail(element)} >
                             <img src={element.media} alt="" style={{width:234}}/>
                         </Col>
                     </div>)
                 
-                itemI++;
-                patternI++;
+                itemI = itemI + 1;
+                patternI = patternI + 1;
 
                 render.push(r);
                 

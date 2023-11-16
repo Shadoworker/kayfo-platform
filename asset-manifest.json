@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/kayfo-platform/static/css/main.58f62f2b.css",
+    "main.js": "/kayfo-platform/static/js/main.31b95527.js",
+    "static/js/787.0a7a427f.chunk.js": "/kayfo-platform/static/js/787.0a7a427f.chunk.js",
+    "static/media/bg-pattern.png": "/kayfo-platform/static/media/bg-pattern.a398ec277bc9ca05a21b.png",
+    "static/media/aj-banner.png": "/kayfo-platform/static/media/aj-banner.d7a0a838893072443868.png",
+    "static/media/cmb-logo.png": "/kayfo-platform/static/media/cmb-logo.6964f61b36ccdbfb6b71.png",
+    "static/media/ds-logo.png": "/kayfo-platform/static/media/ds-logo.0af259d0ee98e9207379.png",
+    "static/media/ak-logo.png": "/kayfo-platform/static/media/ak-logo.ef85c3b098701eb378b8.png",
+    "static/media/jr-banner.png": "/kayfo-platform/static/media/jr-banner.8b16a8e325c656b442ee.png",
+    "static/media/tm-logo.png": "/kayfo-platform/static/media/tm-logo.d72e6727fdba0db16fd9.png",
+    "static/media/ar-logo.png": "/kayfo-platform/static/media/ar-logo.ed05206fb042f4fde00f.png",
+    "static/media/aj-logo.png": "/kayfo-platform/static/media/aj-logo.ef728ab9d7f2894ac193.png",
+    "static/media/vn-logo.png": "/kayfo-platform/static/media/vn-logo.1293aec653c76ac1f656.png",
+    "static/media/jr-logo.png": "/kayfo-platform/static/media/jr-logo.e5a366c6f9c667823522.png",
+    "index.html": "/kayfo-platform/index.html",
+    "main.58f62f2b.css.map": "/kayfo-platform/static/css/main.58f62f2b.css.map",
+    "main.31b95527.js.map": "/kayfo-platform/static/js/main.31b95527.js.map",
+    "787.0a7a427f.chunk.js.map": "/kayfo-platform/static/js/787.0a7a427f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.58f62f2b.css",
+    "static/js/main.31b95527.js"
+  ]
+}

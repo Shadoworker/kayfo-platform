@@ -140,8 +140,9 @@ State> {
              <div className='kayfo-block-arrow' ><img onClick={()=>this.gotoGames("Nos meilleurs jeux")} src={require("../assets/icons/arrow.png")} alt="" /></div>
             </Row>
             <Row>
-             <Col className='kayfo-masonry-main' style={{overflowX:'auto', overflowY:'hidden'}}>
+              <Col className='kayfo-masonry-main' style={{overflowX:'auto', overflowY:'hidden'}}>
 
+                {this.state.items.filter(item => item.tags.includes(this.props.mainState.filterTag)).length > 0 &&
                 <div style={{minWidth:"100%", display:'flex', flexDirection:'row'}}>
 
                     {this.renderMasonry(this.state.items.filter(item => item.tags.includes(this.props.mainState.filterTag))).map((item,index)=>
@@ -149,7 +150,14 @@ State> {
                     )} 
 
                 </div>
+                 }
+                 {this.state.items.filter(item => item.tags.includes(this.props.mainState.filterTag)).length == 0 &&
+                  <Col className='kayfo-filter-no-result-box'>
+                    Aucun résultat
+                  </Col>
+                  }
              </Col>
+             
             </Row>
         </Container>
     )

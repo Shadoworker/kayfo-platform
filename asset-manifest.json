@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kayfo-platform/static/css/main.58f62f2b.css",
-    "main.js": "/kayfo-platform/static/js/main.31b95527.js",
+    "main.js": "/kayfo-platform/static/js/main.370eaf92.js",
     "static/js/787.0a7a427f.chunk.js": "/kayfo-platform/static/js/787.0a7a427f.chunk.js",
     "static/media/bg-pattern.png": "/kayfo-platform/static/media/bg-pattern.a398ec277bc9ca05a21b.png",
     "static/media/aj-banner.png": "/kayfo-platform/static/media/aj-banner.d7a0a838893072443868.png",
@@ -16,11 +16,11 @@
     "static/media/jr-logo.png": "/kayfo-platform/static/media/jr-logo.e5a366c6f9c667823522.png",
     "index.html": "/kayfo-platform/index.html",
     "main.58f62f2b.css.map": "/kayfo-platform/static/css/main.58f62f2b.css.map",
-    "main.31b95527.js.map": "/kayfo-platform/static/js/main.31b95527.js.map",
+    "main.370eaf92.js.map": "/kayfo-platform/static/js/main.370eaf92.js.map",
     "787.0a7a427f.chunk.js.map": "/kayfo-platform/static/js/787.0a7a427f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.58f62f2b.css",
-    "static/js/main.31b95527.js"
+    "static/js/main.370eaf92.js"
   ]
 }

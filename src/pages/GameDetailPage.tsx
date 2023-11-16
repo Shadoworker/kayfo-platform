@@ -1,20 +1,39 @@
 import React, { Component, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import CategoriesCards from '../components/CategoriesBanner';
+import BottomTabNav from '../components/BottomTabNav';
+import CategoriesFooter from '../components/CategoriesFooter';
+
+import GamesPageList from '../components/GamesPageList';
+import { WithRouterProps, withRouter } from '../components/WithRouterProps';
+import GameDetailComp from '../components/GameDetailComp';
 
 
+
+interface Props {
+}
 interface State {
-   index : number
+   index : number,
+   navState : any
 }
 
 
-class GameDetailPage extends Component<{}, State> {
+class GameDetailPage extends Component<WithRouterProps<Props>,
+State> {
 
-  constructor(props: {}) {
-    super(props);
-    this.state = {
-      index : 0
+ 
+    state = {
+      index : 0,
+      navState : {},
     };
+
+
+  componentDidMount(): void {
+    
+    // console.log(this.props.location.state)
+      window.scrollTo(0,0);
+
   }
 
  
@@ -22,11 +41,22 @@ class GameDetailPage extends Component<{}, State> {
      return(
         <div className="cmd-page">
             <Header />
-            <div></div>
-            <Footer />
+            <CategoriesCards />
+            <div className='kayfo-body-content'>
+
+              <GameDetailComp />
+
+              <GamesPageList />
+
+              <CategoriesFooter />
+
+              <Footer />
+            </div>
+           
+            <BottomTabNav />
         </div>
     )
   };
 };
 
-export default GameDetailPage;
+export default withRouter<Props>(GameDetailPage);

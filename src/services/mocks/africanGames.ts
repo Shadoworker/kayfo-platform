@@ -1,40 +1,49 @@
 var africanGames = [
 
     {
-        title : 'Game 1',
-        media : require("../../assets/img/aj-banner.png")
+        title : 'Afro Juggle',
+        media : require("../../assets/img/aj-banner.png"),
+        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
     },
     {
-        title : 'Game 1',
-        media : require("../../assets/img/jr-banner.png")
+        title : 'Jam Rush',
+        media : require("../../assets/img/jr-banner.png"),
+        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
     },
     {
-        title : 'Game 1',
-        media : require("../../assets/img/ak-logo.png")
+        title : 'Afro Kick',
+        media : require("../../assets/img/ak-logo.png"),
+        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
     },
     {
-        title : 'Game 1',
-        media : require("../../assets/img/aj-logo.png")
+        title : 'Afro Juggle',
+        media : require("../../assets/img/aj-logo.png"),
+        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
     },
     {
-        title : 'Game 1',
-        media : require("../../assets/img/jr-banner.png")
+        title : 'Jam Rush',
+        media : require("../../assets/img/jr-banner.png"),
+        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
     },
     {
-        title : 'Game 1',
-        media : require("../../assets/img/cmb-logo.png")
+        title : 'Clean My Beach',
+        media : require("../../assets/img/cmb-logo.png"),
+        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
     },
     {
-        title : 'Game 1',
-        media : require("../../assets/img/aj-banner.png")
+        title : 'Afro Juggle',
+        media : require("../../assets/img/aj-banner.png"),
+        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
     },
     {
-        title : 'Game 1',
-        media : require("../../assets/img/ar-logo.png")
+        title : 'Afro Racers',
+        media : require("../../assets/img/ar-logo.png"),
+        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
     },
     {
-        title : 'Game 1',
-        media : require("../../assets/img/aj-logo.png")
+        title : 'Flappy Bird',
+        media : require("../../assets/img/fb-logo.png"),
+        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
     }
 
 ]

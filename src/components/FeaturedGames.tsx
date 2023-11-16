@@ -3,24 +3,30 @@ import { Container, Row, Col, ListGroup, Button } from 'react-bootstrap';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import featuredGames from '../services/mocks/featuredGames';
+import { WithRouterProps, withRouter } from './WithRouterProps';
+// import { useNavigate } from 'react-router-dom';
 
+
+interface Props {
+
+  }
+  
 interface State {
-   index : number,
-   items : any[]
+
+    index : number,
+    items : any[]
 }
- 
- 
+
+
 const pattern = [[1,1],[1,1],[2,2],[1,1],[1,1]]
 
-class FeaturedGames extends Component<{}, State> {
+class FeaturedGames extends Component<WithRouterProps<Props>,
+State> {
 
-  constructor(props: {}) {
-    super(props);
-    this.state = {
+    state = {
       index : 0,
       items : featuredGames
     };
-  }
 
 
   componentDidMount(): void {
@@ -28,7 +34,18 @@ class FeaturedGames extends Component<{}, State> {
 
   }
 
+  gotoGames = (_title:string)=>{
+    // const navigate = useNavigate();
+    this.props.navigate("/games", {state : {title : _title}})
+    
+  }
 
+  gotoGameDetail = (_game:any)=>{
+    // const navigate = useNavigate();
+    this.props.navigate("/gamedetail", {state : {game : _game}})
+    
+  }
+  
   renderMasonry = ()=>{
 
         var patternI = 0;
@@ -65,12 +82,12 @@ class FeaturedGames extends Component<{}, State> {
 
                 var r = (
                 <div className='kayfo-masonry-container'>
-                    <Col className='kayfo-masonry-item' style={{minWidth:'50%'}} >
+                    <Col className='kayfo-masonry-item' style={{minWidth:'50%'}} onClick={()=>this.gotoGameDetail(element)}  >
                         <img src={this.state.items[i].media} alt="" style={{width:110}}/>
                     </Col>
 
                     {renderSecond && 
-                    <Col className='kayfo-masonry-item' style={{minWidth:'50%'}} >
+                    <Col className='kayfo-masonry-item' style={{minWidth:'50%'}} onClick={()=>this.gotoGameDetail(element)} >
                         <img src={element.media} alt="" style={{width:110}}/>
                     </Col>}
                 </div>)
@@ -83,7 +100,7 @@ class FeaturedGames extends Component<{}, State> {
             {
                 var r = (
                     <div className='kayfo-masonry-container' style={{display:'flex', minHeight:234, flexDirection:'column', justifyContent:'space-between'}}>
-                        <Col className='kayfo-masonry-item' style={{minHeight:234}} >
+                        <Col className='kayfo-masonry-item' style={{minHeight:234}} onClick={()=>this.gotoGameDetail(element)} >
                             <img src={element.media} alt="" style={{width:234}}/>
                         </Col>
                     </div>)
@@ -106,7 +123,7 @@ class FeaturedGames extends Component<{}, State> {
         <Container>
             <Row className='kayfo-block-header'>
              <div className='kayfo-block-title'><span>Nos meilleurs selections</span></div>
-             <div className='kayfo-block-arrow' ><img src={require("../assets/icons/arrow.png")} alt="" /></div>
+             <div className='kayfo-block-arrow' ><img onClick={()=>this.gotoGames("Nos meilleurs jeux")} src={require("../assets/icons/arrow.png")} alt="" /></div>
             </Row>
             <Row>
              <Col className='kayfo-masonry-main' style={{overflowX:'auto', overflowY:'hidden'}}>
@@ -125,4 +142,4 @@ class FeaturedGames extends Component<{}, State> {
   };
 };
 
-export default FeaturedGames;
+export default withRouter<Props>(FeaturedGames);

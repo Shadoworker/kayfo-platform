@@ -82,7 +82,6 @@
   background-color: var(--kayfo-violet) !important;
 }
 
-
 .form-select
 {
   --bs-form-select-bg-img:url('./assets/icons/select-arrow.png');
@@ -162,6 +161,7 @@
   border-radius:6px;
   background-color:'darkcyan';
   box-sizing: content-box;
+  cursor: pointer;
 }
 
 
@@ -270,11 +270,121 @@
 
 
 
+.kayfo-games-pagination-container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 50px;
+}
 
 
+.kayfo-games-pagination *
+{ font-family: 'Nunito';
+  font-weight: normal;
+  margin: 5px;
+  border-radius: 15px !important;
+  /* background-color: var(--kayfo-dark-pink);
+  border: solid 1px #fff; */
+}
 
 
+.kayfo-games-pagination * a
+{ 
+  background-color: var(--kayfo-dark-pink);
+  border: solid 1px #fff;
+  text-decoration: none;
+}
+ul li.page-item span
+{ 
+  color: #ffffff;
+}
 
+ul li.page-item:hover span
+{ 
+  color: #2d2d2d;
+}
+
+
+a.page-link
+{
+  color: #fff;
+}
+
+ul li.page-item.active span
+{ 
+  background-color: var(--kayfo-orange);
+  border: solid 1px #fff;
+  color: #000000;
+  text-decoration: none;
+}
+
+.page-link:hover 
+{ 
+  background-color: var(--kayfo-orange);
+  border: solid 1px #fff;
+  color: #000000;
+  text-decoration: none;
+}
+
+
+.kayfo-game-detail-container
+{
+  background-color: var(--kayfo-violet);
+  border-radius: 6px;
+  position: relative;
+  color: #fff;
+}
+
+.kayfo-game-detail-img
+{
+  max-height: 450px;
+  object-fit: cover;
+}
+
+.kayfo-playnow-btn
+{
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--kayfo-orange);
+  border-radius: 22px;
+  padding: 10px 19px;
+  border: solid 1px #fff;
+}
+
+.kayfo-playnow-btn:hover
+{
+  background-color: var(--kayfo-violet);
+}
+
+.kayfo-addfav
+{
+  padding: 10px;
+  width: 47px;
+  height: 47px;
+  background-color: #87878794;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.kayfo-progress-btn
+{
+  background-color: var(--kayfo-pink);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all ease-in .2s;
+}
+.kayfo-progress-btn:hover
+{
+  color: #000;
+  background-color: #fff;
+  transition: all ease-in .1s;
+}
 
 
 @media only screen and (max-width: 600px) {
@@ -293,5 +403,18 @@
   .kayfo-footer-box
   {
     padding-bottom: 130px;
+  }
+  .kayfo-playnow-btn
+  {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: solid 1px #fff;
+  }
+  
+  .kayfo-game-detail-img
+  {
+    max-height: 250px;
   }
 }

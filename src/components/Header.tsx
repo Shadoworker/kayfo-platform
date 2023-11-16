@@ -28,7 +28,7 @@ class Header extends Component<{}, State> {
      return(
       <Navbar expand="lg" className="bg-body-tertiary kayfo-header">
       <Container fluid>
-        <Navbar.Brand href="#">
+        <Navbar.Brand href="/">
           <img src={require("../assets/icons/kayfo-logo.png")} className='kayfo-logo' alt="Kayfo"  />
         </Navbar.Brand>
     

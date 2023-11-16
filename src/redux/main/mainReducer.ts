@@ -1,32 +1,23 @@
 interface MainState {
-    value: number;
+    filterTag: string;
   }
   
   const initialState: MainState = {
-    value: 0,
+    filterTag: "",
   };
   
   export enum MainActionTypes {
-    INCREMENT = "INCREMENT",
-    DECREMENT = "DECREMENT",
+    SET_FILTER_TAG = "SET_FILTER_TAG",
   }
+
   
-  interface IncrementAction {
-    type: MainActionTypes.INCREMENT;
-  }
-  
-  interface DecrementAction {
-    type: MainActionTypes.DECREMENT;
-  }
-  
-  export type MainAction = IncrementAction | DecrementAction;
-  
-  const mainReducer = (state = initialState, action: MainAction): MainState => {
+  const mainReducer = (state = initialState, action: any): MainState => {
     switch (action.type) {
-      case MainActionTypes.INCREMENT:
-        return { ...state, value: state.value + 1 };
-      case MainActionTypes.DECREMENT:
-        return { ...state, value: state.value - 1 };
+      
+      case MainActionTypes.SET_FILTER_TAG:
+        return { ...state, filterTag: action.payload };
+      
+
       default:
         return state;
     }

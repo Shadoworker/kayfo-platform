@@ -1,13 +1,10 @@
-import { MainAction, MainActionTypes } from "./mainReducer";
+import { MainActionTypes } from "./mainReducer";
 
-export const increment = (): MainAction => {
+export const setFilterTag = (_payload:any): any => {
   return {
-    type: MainActionTypes.INCREMENT,
+    type: MainActionTypes.SET_FILTER_TAG,
+    payload : _payload
   };
 };
 
-export const decrement = (): MainAction => {
-  return {
-    type: MainActionTypes.DECREMENT,
-  };
-};
+ 

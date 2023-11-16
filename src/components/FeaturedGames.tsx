@@ -4,7 +4,9 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import featuredGames from '../services/mocks/featuredGames';
 import { WithRouterProps, withRouter } from './WithRouterProps';
-// import { useNavigate } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators} from 'redux';
+import * as mainActions from '../redux/main/mainActions'
 
 
 interface Props {
@@ -48,16 +50,23 @@ State> {
   
   renderMasonry = ()=>{
 
+        var tag = this.props.mainState.filterTag;
+
+        var _items = [...this.state.items];
+        
+        if(tag != "")
+            _items = _items.filter(item => item.tags.includes(tag));
+
         var patternI = 0;
         var itemI = 0;
 
         var render : any[] = [];
 
         // for (var i = itemI; i < this.state.items.length; i++) 
-        while(itemI < this.state.items.length)
+        while(itemI < _items.length)
         {
-            const element = this.state.items[itemI];
-            const nextElement = this.state.items[itemI+1];
+            const element = _items[itemI];
+            const nextElement = _items[itemI+1];
 
             if(pattern[patternI][0] == 1 && pattern[patternI+1][0] == 1)
             {
@@ -125,7 +134,7 @@ State> {
      return(
         <Container>
             <Row className='kayfo-block-header'>
-             <div className='kayfo-block-title'><span>Nos meilleurs selections</span></div>
+             <div className='kayfo-block-title'><span>Nos meilleures sélections</span></div>
              <div className='kayfo-block-arrow' ><img onClick={()=>this.gotoGames("Nos meilleurs jeux")} src={require("../assets/icons/arrow.png")} alt="" /></div>
             </Row>
             <Row>
@@ -145,4 +154,17 @@ State> {
   };
 };
 
-export default withRouter<Props>(FeaturedGames);
+const mapStateToProps = (state:any) => {
+    return {
+      mainState: state.mainReducer
+    };
+  };
+  
+  const mapDispatchToProps = (dispatch:any) => {
+    return {
+      mainActions: bindActionCreators(mainActions, dispatch)
+    };
+  };
+  
+  
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter<Props>(FeaturedGames));

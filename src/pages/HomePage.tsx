@@ -7,6 +7,9 @@ import RectGamesList from '../components/RectGamesList';
 import BoxGamesList from '../components/BoxGamesList';
 import BottomTabNav from '../components/BottomTabNav';
 import CategoriesFooter from '../components/CategoriesFooter';
+import { connect } from 'react-redux';
+import { bindActionCreators} from 'redux';
+import * as mainActions from '../redux/main/mainActions'
 
 
 interface State {
@@ -46,5 +49,17 @@ class HomePage extends Component<{}, State> {
     )
   };
 };
+const mapStateToProps = (state:any) => {
+  return {
+    mainState: state.mainReducer
+  };
+};
 
-export default HomePage;
+const mapDispatchToProps = (dispatch:any) => {
+  return {
+    mainActions: bindActionCreators(mainActions, dispatch)
+  };
+};
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

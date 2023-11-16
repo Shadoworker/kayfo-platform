@@ -48,7 +48,7 @@ State> {
                 <Card className='kayfo-game-detail-container'>
                   <div style={{position:'relative'}}>
                     <Card.Img variant="top" src={this.state.item.media} className='kayfo-game-detail-img' />
-                    <Button href={this.state.item.url} className='kayfo-playnow-btn'>Jouer maintenant</Button>
+                    <Button href={this.state.item.url} target="_blank" className='kayfo-playnow-btn'>Jouer maintenant</Button>
                   </div>
                   <Card.Body>
                     <Card.Title>

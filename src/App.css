@@ -103,6 +103,12 @@
   border-color: var(--kayfo-pink);
 }
 
+.kayfo-category-btn.active
+{
+  background-color: var(--kayfo-pink);
+  border-color: var(--kayfo-pink);
+}
+
 .kayfo-category-btn:not(:disabled):not(:disabled):active {
   background-color: var(--kayfo-violet);
   border-color: var(--kayfo-pink);
@@ -164,6 +170,11 @@
   cursor: pointer;
 }
 
+
+.kayfo-masonry-item img {
+  
+  border-radius:6px;
+}
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .kayfo-masonry-main::-webkit-scrollbar {
@@ -254,6 +265,16 @@
   /* max-width: 100%; */
   margin-bottom: 30px;
 }
+
+.kayfo-filter-no-result-box
+{
+  padding:25px 0px;
+  color:#fff;
+  background-color:#ffffff12;
+  text-indent:15px;
+  margin:15px 0px;
+}
+
 /* .kayfo-categories-footer div
 {
   background-color: transparent;

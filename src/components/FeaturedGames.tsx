@@ -4,7 +4,9 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import featuredGames from '../services/mocks/featuredGames';
 import { WithRouterProps, withRouter } from './WithRouterProps';
-// import { useNavigate } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators} from 'redux';
+import * as mainActions from '../redux/main/mainActions'
 
 
 interface Props {
@@ -46,49 +48,61 @@ State> {
     
   }
   
-  renderMasonry = ()=>{
+  renderMasonry = (_items:any[])=>{
 
+       // remove doublons ... ?
+        
         var patternI = 0;
         var itemI = 0;
 
         var render : any[] = [];
 
-        for (let i = itemI; i < this.state.items.length; i++) 
+        // for (var i = itemI; i < this.state.items.length; i++) 
+        while(itemI < _items.length)
         {
-            const element = this.state.items[i];
-
-            if(pattern[patternI][0] == 1)
+            const element = _items[itemI];
+            const nextElement = _items[itemI+1];
+            var firstIndex = itemI;
+            if(pattern[patternI][0] == 1 && pattern[patternI+1][0] == 1)
             {
                 var renderSecond = false;
-                itemI++;
-                patternI++;
-                var nextIndex = i;
+                itemI = itemI + 1;
+                patternI = patternI + 1;
+                // var nextIndex = i;
+                // console.log(itemI)
                 
-                const nextElement = this.state.items[itemI];
+                // const nextElement = this.state.items[itemI];
 
                 if(patternI >= pattern.length) patternI = 0;
-
-                if(element && pattern[patternI][0] == 1)
+                var secondIndex = itemI;
+                if(nextElement && pattern[patternI][0] == 1)
                  {
                     renderSecond = true;
-                    itemI++;
-                    patternI++;
+                    itemI = itemI + 1;
+                    patternI = patternI + 1;
                     if(patternI >= pattern.length) patternI = 0;
-                    nextIndex = itemI;
-
+                    // nextIndex = itemI;
 
                  }
+                 else
+                 {
+                  itemI = itemI + 1;
+                  patternI = patternI + 1;
+                  if(patternI >= pattern.length) patternI = 0;
+                 }
                  
+                 secondIndex = itemI;
+
 
                 var r = (
-                <div className='kayfo-masonry-container'>
+                <div key={firstIndex} className='kayfo-masonry-container'>
                     <Col className='kayfo-masonry-item' style={{minWidth:'50%'}} onClick={()=>this.gotoGameDetail(element)}  >
-                        <img src={this.state.items[i].media} alt="" style={{width:110}}/>
+                        <img src={element.media} alt="" style={{width:110}}/>
                     </Col>
 
                     {renderSecond && 
-                    <Col className='kayfo-masonry-item' style={{minWidth:'50%'}} onClick={()=>this.gotoGameDetail(element)} >
-                        <img src={element.media} alt="" style={{width:110}}/>
+                    <Col key={secondIndex} className='kayfo-masonry-item' style={{minWidth:'50%'}} onClick={()=>this.gotoGameDetail(nextElement)} >
+                        <img src={nextElement.media} alt="" style={{width:110}}/>
                     </Col>}
                 </div>)
  
@@ -99,14 +113,14 @@ State> {
             else
             {
                 var r = (
-                    <div className='kayfo-masonry-container' style={{display:'flex', minHeight:234, flexDirection:'column', justifyContent:'space-between'}}>
+                    <div  key={firstIndex} className='kayfo-masonry-container' style={{display:'flex', minHeight:234, flexDirection:'column', justifyContent:'space-between'}}>
                         <Col className='kayfo-masonry-item' style={{minHeight:234}} onClick={()=>this.gotoGameDetail(element)} >
                             <img src={element.media} alt="" style={{width:234}}/>
                         </Col>
                     </div>)
                 
-                itemI++;
-                patternI++;
+                itemI = itemI + 1;
+                patternI = patternI + 1;
 
                 render.push(r);
                 
@@ -122,7 +136,7 @@ State> {
      return(
         <Container>
             <Row className='kayfo-block-header'>
-             <div className='kayfo-block-title'><span>Nos meilleurs selections</span></div>
+             <div className='kayfo-block-title'><span>Nos meilleures sélections</span></div>
              <div className='kayfo-block-arrow' ><img onClick={()=>this.gotoGames("Nos meilleurs jeux")} src={require("../assets/icons/arrow.png")} alt="" /></div>
             </Row>
             <Row>
@@ -130,7 +144,7 @@ State> {
 
                 <div style={{minWidth:"100%", display:'flex', flexDirection:'row'}}>
 
-                    {this.renderMasonry().map((item,index)=>
+                    {this.renderMasonry(this.state.items.filter(item => item.tags.includes(this.props.mainState.filterTag))).map((item,index)=>
                         item
                     )} 
 
@@ -142,4 +156,17 @@ State> {
   };
 };
 
-export default withRouter<Props>(FeaturedGames);
+const mapStateToProps = (state:any) => {
+    return {
+      mainState: state.mainReducer
+    };
+  };
+  
+  const mapDispatchToProps = (dispatch:any) => {
+    return {
+      mainActions: bindActionCreators(mainActions, dispatch)
+    };
+  };
+  
+  
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter<Props>(FeaturedGames));

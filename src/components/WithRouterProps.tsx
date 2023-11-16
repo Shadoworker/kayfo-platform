@@ -12,6 +12,8 @@ interface RouterProps {
   navigate: NavigateFunction;
   readonly params: Params<string>;
   location: Location;
+  mainState: any;
+  mainActions: any;
 }
 
 export type WithRouterProps<T> = T & RouterProps;

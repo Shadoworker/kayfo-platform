@@ -48,15 +48,10 @@ State> {
     
   }
   
-  renderMasonry = ()=>{
+  renderMasonry = (_items:any[])=>{
 
-        var tag = this.props.mainState.filterTag;
-
-        var _items = [...this.state.items];
+       // remove doublons ... ?
         
-        if(tag != "")
-            _items = _items.filter(item => item.tags.includes(tag));
-
         var patternI = 0;
         var itemI = 0;
 
@@ -67,7 +62,7 @@ State> {
         {
             const element = _items[itemI];
             const nextElement = _items[itemI+1];
-
+            var firstIndex = itemI;
             if(pattern[patternI][0] == 1 && pattern[patternI+1][0] == 1)
             {
                 var renderSecond = false;
@@ -79,7 +74,7 @@ State> {
                 // const nextElement = this.state.items[itemI];
 
                 if(patternI >= pattern.length) patternI = 0;
-
+                var secondIndex = itemI;
                 if(nextElement && pattern[patternI][0] == 1)
                  {
                     renderSecond = true;
@@ -88,18 +83,25 @@ State> {
                     if(patternI >= pattern.length) patternI = 0;
                     // nextIndex = itemI;
 
-
+                 }
+                 else
+                 {
+                  itemI = itemI + 1;
+                  patternI = patternI + 1;
+                  if(patternI >= pattern.length) patternI = 0;
                  }
                  
+                 secondIndex = itemI;
+
 
                 var r = (
-                <div key={itemI} className='kayfo-masonry-container'>
+                <div key={firstIndex} className='kayfo-masonry-container'>
                     <Col className='kayfo-masonry-item' style={{minWidth:'50%'}} onClick={()=>this.gotoGameDetail(element)}  >
                         <img src={element.media} alt="" style={{width:110}}/>
                     </Col>
 
                     {renderSecond && 
-                    <Col className='kayfo-masonry-item' style={{minWidth:'50%'}} onClick={()=>this.gotoGameDetail(nextElement)} >
+                    <Col key={secondIndex} className='kayfo-masonry-item' style={{minWidth:'50%'}} onClick={()=>this.gotoGameDetail(nextElement)} >
                         <img src={nextElement.media} alt="" style={{width:110}}/>
                     </Col>}
                 </div>)
@@ -111,7 +113,7 @@ State> {
             else
             {
                 var r = (
-                    <div  key={itemI} className='kayfo-masonry-container' style={{display:'flex', minHeight:234, flexDirection:'column', justifyContent:'space-between'}}>
+                    <div  key={firstIndex} className='kayfo-masonry-container' style={{display:'flex', minHeight:234, flexDirection:'column', justifyContent:'space-between'}}>
                         <Col className='kayfo-masonry-item' style={{minHeight:234}} onClick={()=>this.gotoGameDetail(element)} >
                             <img src={element.media} alt="" style={{width:234}}/>
                         </Col>
@@ -142,7 +144,7 @@ State> {
 
                 <div style={{minWidth:"100%", display:'flex', flexDirection:'row'}}>
 
-                    {this.renderMasonry().map((item,index)=>
+                    {this.renderMasonry(this.state.items.filter(item => item.tags.includes(this.props.mainState.filterTag))).map((item,index)=>
                         item
                     )} 
 

@@ -135,9 +135,9 @@ State> {
    render(): React.ReactNode {
      return(
         <Container>
-            <Row className='kayfo-block-header'>
+            <Row className='kayfo-block-header' onClick={()=>this.gotoGames("Nos meilleurs jeux")}>
              <div className='kayfo-block-title'><span>Nos meilleures sélections</span></div>
-             <div className='kayfo-block-arrow' ><img onClick={()=>this.gotoGames("Nos meilleurs jeux")} src={require("../assets/icons/arrow.png")} alt="" /></div>
+             <div className='kayfo-block-arrow' ><img  src={require("../assets/icons/arrow.png")} alt="" /></div>
             </Row>
             <Row>
               <Col className='kayfo-masonry-main' style={{overflowX:'auto', overflowY:'hidden'}}>

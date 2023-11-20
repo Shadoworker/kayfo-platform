@@ -26,12 +26,16 @@ State> {
  
 
   componentDidMount(): void {
- 
 
+
+    this.setState({item : this.props.location.state.game})
   }
 
- 
-
+ componentDidUpdate(prevProps: Readonly<WithRouterProps<Props>>, prevState: Readonly<State>, snapshot?: any): void {
+  
+  window.scrollTo(0,0);
+   
+ }
    
   goplayGame = (_game:any)=>{
     // const navigate = useNavigate();
@@ -47,13 +51,13 @@ State> {
               <Col >
                 <Card className='kayfo-game-detail-container'>
                   <div style={{position:'relative'}}>
-                    <Card.Img variant="top" src={this.state.item.media} className='kayfo-game-detail-img' />
-                    <Button href={this.state.item.url} target="_blank" className='kayfo-playnow-btn'>Jouer maintenant</Button>
+                    <Card.Img variant="top" src={this.props.location.state.game.media} className='kayfo-game-detail-img' />
+                    <Button href={this.props.location.state.game.url} target="_blank" className='kayfo-playnow-btn'>Jouer maintenant</Button>
                   </div>
                   <Card.Body>
                     <Card.Title>
                       <Row>
-                        <Col xs={8} style={{fontWeight:'bolder'}} >{this.state.item.title} - By Kayfo Games</Col>
+                        <Col xs={8} style={{fontWeight:'bolder'}} >{this.props.location.state.game.title} - By Kayfo Games</Col>
                         <Col xs={4} style={{display:'flex', justifyContent:'flex-end'}}>
                           <img className='kayfo-addfav' src={require("../assets/icons/add-to-favs-icon.png")} alt="" />
                         </Col>
@@ -65,14 +69,14 @@ State> {
 
                     <Col style={{display:'flex', alignItems:'center'}}>
                         <Row style={{flex:1}}>
-                            {this.state.item.externals[0] &&
+                            {this.props.location.state.game.externals[0] &&
                               <Col style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
                                 <a href="#" className='kayfo-social-link'>
                                     <img style={{width:'100%'}} src={require('../assets/icons/gplay-icon.png')} alt="" />
                                 </a>
                             </Col>
                             }
-                            {this.state.item.externals[1] &&
+                            {this.props.location.state.game.externals[1] &&
                               <Col style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
                                 <a href="#" className='kayfo-social-link'>
                                     <img style={{width:'100%'}} src={require('../assets/icons/appstore-icon.png')} alt="" />
@@ -92,7 +96,7 @@ State> {
              
               {/* <Carousel>
                 <Carousel.Item>
-                  <img style={{width:'100%', maxHeight:300 ,objectFit:'cover'}} src={this.state.item.media} alt="" />
+                  <img style={{width:'100%', maxHeight:300 ,objectFit:'cover'}} src={this.props.location.state.game.media} alt="" />
                   <Carousel.Caption>
                     <Button className='kayfo-playnow-btn'>Jouer maintenant</Button>
                   </Carousel.Caption>

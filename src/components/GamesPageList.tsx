@@ -69,9 +69,9 @@ State> {
 
 
    
-  gotoGameDetail = (_game:any)=>{
+  gotoGameDetail = (_game:any, _index:number)=>{
     // const navigate = useNavigate();
-    this.props.navigate("/gamedetail", {state : {game : _game}})
+    this.props.navigate(`/gamedetail`, {state : {game : _game}})
     
   }
 
@@ -93,7 +93,7 @@ State> {
                   const height2 =item.pattern[1] === 2 ? "grid-item--height2" : "";
                                     
                   return  (
-                  <div key={index} className={`grid-item ${width2} ${height2}`} onClick={()=>this.gotoGameDetail(item)} >
+                  <div key={index} className={`grid-item ${width2} ${height2}`} onClick={()=>this.gotoGameDetail(item, index)} >
                       <img src={item.media} alt="" style={{width:'100%', height:'100%', objectFit:'cover', borderRadius:6}}/>
                   </div>)
 

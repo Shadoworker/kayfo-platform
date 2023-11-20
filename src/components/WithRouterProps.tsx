@@ -5,6 +5,7 @@ import {
   useLocation,
   useNavigate,
   useParams,
+  HistoryRouterProps,
   Location,
 } from "react-router-dom";
 

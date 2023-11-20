@@ -1,9 +1,9 @@
 var gameslistGames = [
 
     {
-        title : 'Afro Juggle',
+        title : 'Afro Juggle 1',
         media : require("../../assets/img/aj-logo.png"),
-        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
+        url : "https://kayfo.games/#gamesanchor",
         externals : [
             {type:'android', link:'#'},
             {type:'ios', link:'#'},
@@ -14,7 +14,7 @@ var gameslistGames = [
     {
         title : '2048',
         media : require("../../assets/img/2048-logo.png"),
-        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
+        url : "http://preprod.kayfo.games/~julien/games/2048/",
         externals : [],
         tags : ["" , "New", "Trending", "Classic", "Fun", "Random", "Updated"],
         pattern : [1,2]
@@ -22,7 +22,7 @@ var gameslistGames = [
     {
         title : 'Afro Kick',
         media : require("../../assets/img/ak-logo.jpg"),
-        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
+        url : "http://preprod.kayfo.games/~mandiaye/afrofreekick/",
         externals : [],
         tags : ["" , "New", "Trending", "Classic", "Fun", "Random", "Updated"],
         pattern : [1,2]
@@ -31,7 +31,7 @@ var gameslistGames = [
     {
         title : 'Clean My Beach',
         media : require("../../assets/img/cmb-logo.png"),
-        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
+        url : "https://kayfo.games/#gamesanchor",
         externals : [
             {type:'android', link:'#'},
             {type:'ios', link:'#'},
@@ -43,7 +43,7 @@ var gameslistGames = [
     {
         title : 'Afro Racers',
         media : require("../../assets/img/ar-logo.png"),
-        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
+        url : "http://preprod.kayfo.games/~thierno/Afro_Racers/",
         externals : [],
         tags : ["" , "Trending", "Updated", "Fun", "Random"],
         pattern : [1,2]
@@ -53,7 +53,7 @@ var gameslistGames = [
     {
         title : 'Mbeuguel Story',
         media : require("../../assets/img/vn-logo.png"),
-        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
+        url : "http://preprod.kayfo.games/~julien/games/mbeuguel_story/",
         externals : [],
         tags : ["" , "New", "Trending", "Classic", "Random", "Updated"],
         pattern : [1,2]
@@ -61,7 +61,7 @@ var gameslistGames = [
     {
         title : 'Teul Master',
         media : require("../../assets/img/tm-logo.png"),
-        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
+        url : "http://preprod.kayfo.games/~yvon/TeulMaster/",
         externals : [],
         tags : ["" , "New", "Trending", "Updated", "Fun", "Random", "Updated"],
         pattern : [1,2]
@@ -69,7 +69,7 @@ var gameslistGames = [
     {
         title : 'Jam Rush',
         media : require("../../assets/img/jr-banner.png"),
-        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
+        url : "https://kayfo.games/#gamesanchor",
         externals : [
             {type:'android', link:'#'},
             {type:'ios', link:'#'},
@@ -78,9 +78,9 @@ var gameslistGames = [
         pattern : [1,2]
     },
     {
-        title : 'Flappy Bird',
+        title : 'Clumzy Bird',
         media : require("../../assets/img/fb-logo.png"),
-        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
+        url : "http://preprod.kayfo.games/~julien/games/clumsy-bird/",
         externals : [],
         tags : ["" , "New", "Trending", "Updated", "Fun", "Random", "Updated"],
         pattern : [1,2]
@@ -88,7 +88,7 @@ var gameslistGames = [
     {
         title : 'Jam Rush',
         media : require("../../assets/img/jr-banner.png"),
-        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
+        url : "https://kayfo.games/#gamesanchor",
         externals : [
             {type:'android', link:'#'},
             {type:'ios', link:'#'},
@@ -99,7 +99,7 @@ var gameslistGames = [
     {
         title : 'Detective Syra',
         media : require("../../assets/img/ds-logo.png"),
-        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
+        url : "http://preprod.kayfo.games/~yeshua/detective-syra/",
         externals : [],
         tags : ["" , "New", "Trending", "Updated", "Fun", "Random", "Updated"],
         pattern : [1,2]
@@ -107,7 +107,7 @@ var gameslistGames = [
     {
         title : 'Afro Racers',
         media : require("../../assets/img/ar-logo.png"),
-        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
+        url : "http://preprod.kayfo.games/~thierno/Afro_Racers/",
         externals : [],
         tags : ["" , "New", "Trending", "Updated", "Fun", "Random", "Updated"],
         pattern : [1,2]
@@ -115,7 +115,7 @@ var gameslistGames = [
     {
         title : 'Jam Rush',
         media : require("../../assets/img/jr-logo.png"),
-        url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
+        url : "https://kayfo.games/#gamesanchor",
         externals : [
             {type:'android', link:'#'},
             {type:'ios', link:'#'},
@@ -124,13 +124,10 @@ var gameslistGames = [
         pattern : [1,2]
     },
     {
-        title : 'Afro Juggle',
-        media : require("../../assets/img/aj-logo.png"),
+        title : 'Afro Juggle 2',
+        media : require("../../assets/img/aj5-logo.png"),
         url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
-        externals : [
-            {type:'android', link:'#'},
-            {type:'ios', link:'#'},
-        ],
+        externals : [],
         tags : ["" , "New", "Trending", "Random", "Updated"],
         pattern : [1,2]
     }

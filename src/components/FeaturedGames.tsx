@@ -42,9 +42,9 @@ State> {
     
   }
 
-  gotoGameDetail = (_game:any)=>{
+  gotoGameDetail = (_game:any, _index:number)=>{
     // const navigate = useNavigate();
-    this.props.navigate("/gamedetail", {state : {game : _game}})
+    this.props.navigate(`/gamedetail`, {state : {game : _game}})
     
   }
   
@@ -96,12 +96,12 @@ State> {
 
                 var r = (
                 <div key={firstIndex} className='kayfo-masonry-container'>
-                    <Col className='kayfo-masonry-item' style={{minWidth:'50%'}} onClick={()=>this.gotoGameDetail(element)}  >
+                    <Col className='kayfo-masonry-item' style={{minWidth:'50%'}} onClick={()=>this.gotoGameDetail(element, firstIndex)}  >
                         <img src={element.media} alt="" style={{width:110}}/>
                     </Col>
 
                     {renderSecond && 
-                    <Col key={secondIndex} className='kayfo-masonry-item' style={{minWidth:'50%'}} onClick={()=>this.gotoGameDetail(nextElement)} >
+                    <Col key={secondIndex} className='kayfo-masonry-item' style={{minWidth:'50%'}} onClick={()=>this.gotoGameDetail(nextElement, secondIndex)} >
                         <img src={nextElement.media} alt="" style={{width:110}}/>
                     </Col>}
                 </div>)
@@ -114,7 +114,7 @@ State> {
             {
                 var r = (
                     <div  key={firstIndex} className='kayfo-masonry-container' style={{display:'flex', minHeight:234, flexDirection:'column', justifyContent:'space-between'}}>
-                        <Col className='kayfo-masonry-item' style={{minHeight:234}} onClick={()=>this.gotoGameDetail(element)} >
+                        <Col className='kayfo-masonry-item' style={{minHeight:234}} onClick={()=>this.gotoGameDetail(element,firstIndex)} >
                             <img src={element.media} alt="" style={{width:234}}/>
                         </Col>
                     </div>)

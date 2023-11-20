@@ -52,9 +52,9 @@ State> {
   }
 
      
-  gotoGameDetail = (_game:any)=>{
+  gotoGameDetail = (_game:any, _index:number)=>{
     // const navigate = useNavigate();
-    this.props.navigate("/gamedetail", {state : {game : _game}})
+    this.props.navigate(`/gamedetail`, {state : {game : _game}})
     
   }
 
@@ -73,7 +73,7 @@ State> {
 
                     {this.state.items.filter(item => item.tags.includes(this.props.mainState.filterTag)).map((item,index)=>
                         <div className='kayfo-masonry-container' key={index} style={{display:'flex', maxHeight:110, flexDirection:'column'}}>
-                            <Col className='kayfo-masonry-item' style={{maxHeight:110, minWidth:110}}  onClick={()=>this.gotoGameDetail(item)} >
+                            <Col className='kayfo-masonry-item' style={{maxHeight:110, minWidth:110}}  onClick={()=>this.gotoGameDetail(item,index)} >
                                 <img src={item.media} alt="" style={{width:110, height:'100%', objectFit:'cover', borderRadius:6}}/>
                             </Col>
                         </div>

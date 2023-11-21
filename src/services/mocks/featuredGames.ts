@@ -19,12 +19,13 @@ var featuredGames = [
         tags : ["" , "New", "Random", "Classic", "Updated"],
         pattern : [1,2]
     },
+    
     {
-        title : 'Afro Kick',
-        media : require("../../assets/img/ak-logo.jpg"),
-        url : "http://preprod.kayfo.games/~mandiaye/afrofreekick/",
+        title : 'Djambar Match 3',
+        media : require("../../assets/img/jm-logo.png"),
+        url : "http://preprod.kayfo.games/~thierno/Djambar_Match_3/",
         externals : [],
-        tags : ["" , "New", "Trending", "Fun", "Random", "Updated"],
+        tags : ["" , "New", "Fun", "Classic", "Updated"],
         pattern : [1,2]
     },
     {
@@ -80,11 +81,11 @@ var featuredGames = [
     },
 
     {
-        title : 'Djambar Match 3',
-        media : require("../../assets/img/jm-logo.png"),
-        url : "http://preprod.kayfo.games/~thierno/Djambar_Match_3/",
+        title : 'Afro Kick',
+        media : require("../../assets/img/ak-logo.jpg"),
+        url : "http://preprod.kayfo.games/~mandiaye/afrofreekick/",
         externals : [],
-        tags : ["" , "New", "Fun", "Classic", "Updated"],
+        tags : ["" , "New", "Trending", "Fun", "Random", "Updated"],
         pattern : [1,2]
     }
     ,

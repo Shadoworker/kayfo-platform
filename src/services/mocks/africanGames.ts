@@ -25,13 +25,10 @@ var africanGames = [
         tags : ["" , "New", "Trending", "Updated", "Fun", "Random", "Updated"],
     },
     {
-        title : 'Afro Juggle 1',
-        media : require("../../assets/img/aj-logo.png"),
-        url : "https://kayfo.games/#gamesanchor",
-        externals : [
-            {type:'android', link:'#'},
-            {type:'ios', link:'#'},
-        ],
+        title : 'Detective Syra Chp.2',
+        media : require("../../assets/img/ds_Kermel.png"),
+        url : "http://preprod.kayfo.games/~yeshua/detective-syra-2/",
+        externals : [],
         tags : ["" , "New",  "Updated", "Random", "Updated"],
     },
     {

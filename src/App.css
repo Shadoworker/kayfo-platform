@@ -1,5 +1,6 @@
 :root {
   --kayfo-orange: #DA7F14;
+  --kayfo-orange-light : #FFA500;
   --kayfo-violet: #280439;
   --kayfo-pink: #FF2264;
   --kayfo-dark-pink:#982062;
@@ -372,7 +373,7 @@ ul li.page-item.active span
   bottom: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--kayfo-orange);
+  background-color: var(--kayfo-orange-light);
   border-radius: 26px;
   padding: 14px 40px;
   border: solid 1px #fff;

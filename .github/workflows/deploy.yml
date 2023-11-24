@@ -31,8 +31,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          application_name: kayfoplay-api
-          environment_name: Kayfoplay-api-staging
+          application_name: fnp-api-staging
+          environment_name: Fnp-api-stg
           version_label: "Kayfoplay-api-staging-${{ steps.format-time.outputs.replaced }}"
           region: eu-central-1
           deployment_package: deploy.zip

@@ -4,6 +4,8 @@ import gameslistGames from '../services/mocks/gameslistGames';
 import Isotope from 'isotope-layout';
 import './styles.css';
 import { WithRouterProps, withRouter } from './WithRouterProps';
+import { Tooltip } from '@mui/material';
+
 
 interface Props {
 
@@ -15,7 +17,6 @@ interface State {
   index : number,
   items : any[]
 }
-
 
 const pattern = [[2,1],[2,2],[1,1],[1,1],[1,1],[1,1],[2,1],[1,1],[1,1]]
 
@@ -94,7 +95,9 @@ State> {
                                     
                   return  (
                   <div key={index} className={`grid-item ${width2} ${height2}`} onClick={()=>this.gotoGameDetail(item, index)} >
-                      <img src={item.media} alt="" style={{width:'100%', height:'100%', objectFit:'cover', borderRadius:6}}/>
+                    <Tooltip placement='top' title={item.title}>
+                      <img src={item.logo} alt="" style={{width:'100%', height:'100%', objectFit:'cover', borderRadius:6}}/>
+                    </Tooltip>
                   </div>)
 
                 })

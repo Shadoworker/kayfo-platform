@@ -5,6 +5,7 @@ import { WithRouterProps, withRouter } from './WithRouterProps';
 import { connect } from 'react-redux';
 import { bindActionCreators} from 'redux';
 import * as mainActions from '../redux/main/mainActions'
+import { Tooltip } from '@mui/material';
 
 
 
@@ -66,7 +67,9 @@ State> {
                     {this.state.items.filter(item => item.tags.includes(this.props.mainState.filterTag)).map((item,index)=>
                         <div className='kayfo-masonry-container' key={index} style={{display:'flex', maxHeight:110, minHeight:130, flexDirection:'column', justifyContent:'space-between'}}>
                             <Col className='kayfo-masonry-item' style={{maxHeight:110}}  onClick={()=>this.gotoGameDetail(item, index)}  >
-                                <img src={item.media} alt="" style={{width:234, height:'100%', objectFit:'cover', borderRadius:6}}/>
+                              <Tooltip placement='top' title={item.title}>
+                                <img src={item.logo} alt="" style={{width:234, height:'100%', objectFit:'cover', borderRadius:6}}/>
+                              </Tooltip>
                             </Col>
                         </div>
                     )}

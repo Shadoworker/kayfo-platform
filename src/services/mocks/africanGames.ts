@@ -2,14 +2,16 @@ var africanGames = [
 
     {
         title : 'Afro Juggle 2',
-        media : require("../../assets/img/aj-banner.png"),
+        logo : require("../../assets/img/aj-banner.png"),
+        banner : require("../../assets/img/banner_afro_juggle.jpg"),
         url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
         externals : [],
         tags : ["" , "New", "Trending", "Updated", "Fun", "Random", "Updated"],
     },
     {
         title : 'Jam Rush',
-        media : require("../../assets/img/jr-banner.png"),
+        logo : require("../../assets/img/jr-banner.png"),
+        banner : require("../../assets/img/banner_jam_rush.jpg"),
         url : "https://kayfo.games/#gamesanchor",
         externals : [
             {type:'android', link:'#'},
@@ -19,21 +21,24 @@ var africanGames = [
     },
     {
         title : 'Afro Kick',
-        media : require("../../assets/img/ak-logo.jpg"),
+        logo : require("../../assets/img/ak-logo.jpg"),
+        banner : require("../../assets/img/ak-logo.jpg"),
         url : "http://preprod.kayfo.games/~mandiaye/afrofreekick/",
         externals : [],
         tags : ["" , "New", "Trending", "Updated", "Fun", "Random", "Updated"],
     },
     {
-        title : 'Detective Syra Chp.2',
-        media : require("../../assets/img/ds_Kermel.png"),
+        title : 'Detective Syra chap.2',
+        logo : require("../../assets/img/ds_2.png"),
+        banner : require("../../assets/img/syra-chapt (2).png"),
         url : "http://preprod.kayfo.games/~yeshua/detective-syra-2/",
         externals : [],
         tags : ["" , "New",  "Updated", "Random", "Updated"],
     },
     {
         title : 'Jam Rush',
-        media : require("../../assets/img/jr-banner.png"),
+        logo : require("../../assets/img/jr-banner.png"),
+        banner : require("../../assets/img/banner_jam_rush.jpg"),
         url : "https://kayfo.games/#gamesanchor",
         externals : [
             {type:'android', link:'#'},
@@ -43,7 +48,8 @@ var africanGames = [
     },
     {
         title : 'Clean My Beach',
-        media : require("../../assets/img/cmb-logo.png"),
+        logo : require("../../assets/img/cmb-logo.png"),
+        banner : require("../../assets/img/banner_clean_my_beach.jpg"),
         url : "https://kayfo.games/#gamesanchor",
         externals : [
             {type:'android', link:'#'},
@@ -53,21 +59,24 @@ var africanGames = [
     },
     {
         title : 'Afro Juggle 2',
-        media : require("../../assets/img/aj-banner.png"),
+        logo : require("../../assets/img/aj-banner.png"),
+        banner : require("../../assets/img/banner_afro_juggle.jpg"),
         url : "http://preprod.kayfo.games/~habibe/afrojuggle3D/",
         externals : [],
         tags : ["" , "Fun", "Random", "Updated"],
     },
     {
         title : 'Afro Racers',
-        media : require("../../assets/img/ar-logo.png"),
+        logo : require("../../assets/img/ar-logo.png"),
+        banner : require("../../assets/img/afro_racers_banner.png"),
         url : "http://preprod.kayfo.games/~thierno/Afro_Racers/",
         externals : [],
         tags : ["" , "New", "Trending", "Updated", "Fun", "Random", "Updated"],
     },
     {
         title : 'Clumzy Bird',
-        media : require("../../assets/img/fb-logo.png"),
+        logo : require("../../assets/img/fb-logo.png"),
+        banner : require("../../assets/img/fb-logo.png"),
         url : "http://preprod.kayfo.games/~julien/games/clumsy-bird/",
         externals : [],
         tags : ["" , "New", "Trending", "Updated", "Fun", "Random", "Updated"],

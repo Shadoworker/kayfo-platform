@@ -51,7 +51,7 @@ State> {
               <Col >
                 <Card className='kayfo-game-detail-container'>
                   <div style={{position:'relative'}}>
-                    <Card.Img variant="top" src={this.props.location.state.game.media} className='kayfo-game-detail-img' />
+                    <Card.Img variant="top" src={this.props.location.state.game.banner} className='kayfo-game-detail-img' />
                     <Button href={this.props.location.state.game.url} target="_blank" className='kayfo-playnow-btn'>Jouer maintenant</Button>
                   </div>
                   <Card.Body>

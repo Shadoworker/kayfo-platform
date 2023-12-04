@@ -7,6 +7,7 @@ import { WithRouterProps, withRouter } from './WithRouterProps';
 import { connect } from 'react-redux';
 import { bindActionCreators} from 'redux';
 import * as mainActions from '../redux/main/mainActions'
+import { Tooltip } from '@mui/material';
 
 
 interface Props {
@@ -97,12 +98,16 @@ State> {
                 var r = (
                 <div key={firstIndex} className='kayfo-masonry-container'>
                     <Col className='kayfo-masonry-item' style={{minWidth:'50%'}} onClick={()=>this.gotoGameDetail(element, firstIndex)}  >
-                        <img src={element.media} alt="" style={{width:110}}/>
+                      <Tooltip placement='top' title={element.title}>
+                        <img src={element.logo} alt="" style={{width:110}}/>
+                      </Tooltip>
                     </Col>
 
                     {renderSecond && 
                     <Col key={secondIndex} className='kayfo-masonry-item' style={{minWidth:'50%'}} onClick={()=>this.gotoGameDetail(nextElement, secondIndex)} >
-                        <img src={nextElement.media} alt="" style={{width:110}}/>
+                        <Tooltip placement='top' title={nextElement.title}>
+                          <img src={nextElement.logo} alt="" style={{width:110}}/>
+                        </Tooltip>
                     </Col>}
                 </div>)
  
@@ -115,7 +120,9 @@ State> {
                 var r = (
                     <div  key={firstIndex} className='kayfo-masonry-container' style={{display:'flex', minHeight:234, flexDirection:'column', justifyContent:'space-between'}}>
                         <Col className='kayfo-masonry-item' style={{minHeight:234}} onClick={()=>this.gotoGameDetail(element,firstIndex)} >
-                            <img src={element.media} alt="" style={{width:234}}/>
+                            <Tooltip placement='top' title={element.title}>
+                              <img src={element.logo} alt="" style={{width:234}}/>
+                            </Tooltip>
                         </Col>
                     </div>)
                 

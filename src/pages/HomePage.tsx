@@ -10,6 +10,8 @@ import CategoriesFooter from '../components/CategoriesFooter';
 import { connect } from 'react-redux';
 import { bindActionCreators} from 'redux';
 import * as mainActions from '../redux/main/mainActions'
+import storyGames from '../services/mocks/storyGames';
+import featuredGames from '../services/mocks/featuredGames';
 
 
 interface State {
@@ -35,8 +37,8 @@ class HomePage extends Component<{}, State> {
             <div className='kayfo-body-content'>
               <FeaturedGames />
               <RectGamesList title="Jeux africains" />
-              <BoxGamesList title="Enquête" />
-              <BoxGamesList title="Classique" />
+              <BoxGamesList title="Jeux Narratifs" items={storyGames} />
+              <BoxGamesList title="Classique" items={featuredGames} />
               <RectGamesList title="Spécial Dakar" />
 
               <CategoriesFooter />

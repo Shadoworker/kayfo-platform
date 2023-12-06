@@ -53,7 +53,6 @@ var gameslistGames = [
         tags : ["" , "Trending", "Updated", "Fun", "Random"],
         pattern : [1,2]
     },
-    
 
     {
         title : 'Mbeuguel Story',

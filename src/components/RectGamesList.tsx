@@ -11,7 +11,8 @@ import { Tooltip } from '@mui/material';
 
 interface Props {
 
-  title:string
+  title:string,
+  items : any[]
 }
 
 interface State {
@@ -68,7 +69,7 @@ State> {
                         <div className='kayfo-masonry-container' key={index} style={{display:'flex', maxHeight:110, minHeight:130, flexDirection:'column', justifyContent:'space-between'}}>
                             <Col className='kayfo-masonry-item' style={{maxHeight:110}}  onClick={()=>this.gotoGameDetail(item, index)}  >
                               <Tooltip placement='top' title={item.title}>
-                                <img src={item.logo} alt="" style={{width:234, height:'100%', objectFit:'cover', borderRadius:6}}/>
+                                <img src={item.banner} alt="" style={{width:234, height:'100%', objectFit:'cover', borderRadius:6}}/>
                               </Tooltip>
                             </Col>
                         </div>

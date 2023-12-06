@@ -9,7 +9,8 @@ import { Tooltip } from '@mui/material';
 
 interface Props {
 
-  title:string
+  title:string,
+  items : any[]
 }
 
 interface State {
@@ -26,7 +27,7 @@ State> {
 
     state = {
       index : 0,
-      items : featuredGames
+      items : this.props.items
     };
 
 

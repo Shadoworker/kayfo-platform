@@ -64,7 +64,7 @@ var featuredGames = [
     {
         title : 'Special Tabasky',
         logo : require("../../assets/img/st-logo.png"),
-        banner : require("../../assets/img/st-logo.png"),
+        banner : require("../../assets/img/st_banner.jpg"),
         url : "http://preprod.kayfo.games/~mandiaye/specialtabaski/",
         externals : [],
         tags : ["" , "New", "Trending", "Random", "Classic"],
